@@ -1,5 +1,5 @@
-# Felipe Carvalho Godoi - 201920237
-# 
+# FELIPE CARVALHO GODOI - 201920237
+# PEDRO HENRIQUE MACIEL ALVES - 201920257
 # Turma 10A
 
 def binary_search(array, left, right, item):
