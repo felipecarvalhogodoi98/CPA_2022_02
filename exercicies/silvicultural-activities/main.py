@@ -1,4 +1,6 @@
-import math
+# FELIPE CARVALHO GODOI - 201920237
+# PEDRO HENRIQUE MACIEL ALVES - 201920257
+# Turma 10A
 
 class Point:
   x = 0
@@ -8,7 +10,7 @@ class Point:
     self.y = y
 
   def dist(self, p):
-    return math.pow(pow(self.x - p.x, 2) + pow(self.y - p.y, 2), 1/2)
+    return pow(pow(self.x - p.x, 2) + pow(self.y - p.y, 2), 1/2)
   
 def find_nearest(point, candidates):
     nearest = None
@@ -21,14 +23,13 @@ def find_nearest(point, candidates):
     return nearest
 
 def tsp(points):
-    remaining = set(points)
-    start = remaining.pop()
+    start = points.pop(0)
     current = start
     route = [start]
-    while remaining:
-        nearest = find_nearest(current, remaining)
+    while len(points) > 0:
+        nearest = find_nearest(current, points)
         route.append(nearest)
-        remaining.remove(nearest)
+        points.remove(nearest)
         current = nearest
     route.append(start)
     return route
